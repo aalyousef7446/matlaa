@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260821-05-d0038b4","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/50d846425a1e5082.telemetry_sdk.js" integrity="sha512-Otbex+ztlVbcEGql0rXGd/3E3ee/hqAntg6DeuUEMG6pIPbXGOSvZbFZVzknAXi1tH/itQ+ijEhOTr2aWj6CXg=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حصر حضور الطابور الصباحي</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/b3bf9e8ac58e6ad6.data_sdk.js" integrity="sha512-otc1u9NYq9Ms5Jt//7vmhrrqR5CLPr8Jdgs6741gqniClfLMcfmC+jK/cKuQdhLv6G0esJ/FzaMS9tv0T/vj/Q=="></script>
+  <script src="/_sdk/a27879be4562f807.resizing_sdk.js" integrity="sha512-trcxRwz+QLrzK0Dqg95xqVRryR7WtWui2YopXyzOIr3WMde3j/xCRgT63/b/EAg7klDsAOuHzoRgoryhwm8QFw=="></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #173b5a;
+      --navy-deep: #102d46;
+      --teal: #2f6d72;
+      --gold: #c59a4a;
+      --paper: #f4f6f5;
+      --ink: #183148;
+      --muted: #657581;
+      --line: #d8e0e2;
+      --success: #24755a;
+      --danger: #a44949;
+      --warning: #b17a27;
+      --violet: #726193;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+      font-family: "Noto Sans Arabic", sans-serif;
+      color: var(--ink);
+    }
+
+    button, input { font-family: inherit; }
+    button { cursor: pointer; }
+    button:disabled { cursor: wait; opacity: .62; }
+
+    button:focus-visible, input:focus-visible {
+      outline: 3px solid rgba(47,109,114,.32);
+      outline-offset: 2px;
+    }
+
+    .app-shell {
+      width: 100%;
+      min-height: calc(100 * min(var(--vh, 1vh), 1vh));
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .app-shell::before, .app-shell::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      pointer-events: none;
+      opacity: .6;
+    }
+
+    .app-shell::before {
+      width: 480px;
+      height: 480px;
+      background: #dbe6e4;
+      top: -260px;
+      left: -170px;
+    }
+
+    .app-shell::after {
+      width: 360px;
+      height: 360px;
+      border: 44px solid #e8dfc9;
+      bottom: -200px;
+      right: -140px;
+    }
+
+    .content-frame {
+      max-width: 1240px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      animation: rise-in .65s ease both;
+    }
+
+    .official-header {
+      border-radius: 22px 22px 8px 8px;
+      border-bottom: 4px solid var(--gold);
+      box-shadow: 0 14px 34px rgba(16,45,70,.16);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 25px 30px;
+    }
+
+    .header-copy {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-width: 0;
+    }
+
+    .seal {
+      width: 54px;
+      height: 54px;
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.38);
+      border-radius: 50%;
+      color: #fff8e8;
+    }
+
+    .eyebrow {
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      opacity: .76;
+      margin: 0 0 3px;
+    }
+
+    .page-heading { margin: 0; line-height: 1.3; }
+    .page-subtitle { margin: 5px 0 0; line-height: 1.75; opacity: .88; }
+
+    .today-pill {
+      padding: 9px 13px;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 10px;
+      white-space: nowrap;
+      font-size: .83rem;
+    }
+
+    .control-panel {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(20,55,75,.07);
+    }
+
+    .date-side, .add-side {
+      display: flex;
+      align-items: end;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .field-block { display: grid; gap: 7px; }
+    .field-label { font-size: .86rem; font-weight: 700; }
+
+    .date-input, .name-input, .row-name {
+      height: 43px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      padding: 0 12px;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .date-input:focus, .name-input:focus, .row-name:focus {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(47,109,114,.13);
+    }
+
+    .name-input { min-width: 245px; }
+
+    .official-button {
+      height: 43px;
+      border: 0;
+      border-radius: 9px;
+      padding: 0 15px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      font-size: .88rem;
+      font-weight: 700;
+      transition: transform .18s, filter .18s, box-shadow .18s;
+    }
+
+    .official-button:hover:not(:disabled), .small-button:hover:not(:disabled) {
+      transform: translateY(-1px);
+      filter: brightness(.97);
+      box-shadow: 0 7px 14px rgba(21,58,90,.14);
+    }
+
+    .outline-button {
+      background: transparent;
+      color: var(--navy);
+      border: 1px solid #b9c9d1;
+    }
+
+    .stats-grid {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      gap: 12px;
+    }
+
+    .stat-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--accent, var(--navy));
+      border-radius: 11px;
+      padding: 14px 16px;
+      box-shadow: 0 6px 17px rgba(20,55,75,.05);
+      min-height: 92px;
+    }
+
+    .stat-label {
+      display: block;
+      color: var(--muted);
+      font-size: .78rem;
+      font-weight: 700;
+    }
+
+    .stat-value {
+      display: block;
+      margin-top: 4px;
+      font-size: 1.8rem;
+      line-height: 1;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .attendance-card {
+      margin-top: 20px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(20,55,75,.07);
+    }
+
+    .card-heading {
+      padding: 19px 22px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .card-heading h2 { margin: 0; }
+    .record-count { color: var(--muted); font-size: .82rem; white-space: nowrap; }
+    .table-wrap { overflow-x: auto; }
+
+    .attendance-table {
+      width: 100%;
+      min-width: 930px;
+      border-collapse: collapse;
+    }
+
+    .attendance-table th {
+      padding: 12px 18px;
+      background: #edf3f2;
+      color: #385267;
+      font-size: .78rem;
+      font-weight: 800;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .attendance-table td {
+      padding: 11px 18px;
+      border-bottom: 1px solid #e9eeee;
+      vertical-align: middle;
+    }
+
+    .attendance-table tr:last-child td { border-bottom: 0; }
+    .number-cell { color: #7b8b95; font-size: .82rem; font-weight: 700; width: 58px; }
+    .row-name { width: 100%; min-width: 180px; }
+
+    .status-buttons {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .status-button {
+      min-height: 34px;
+      border: 1px solid transparent;
+      border-radius: 7px;
+      padding: 5px 9px;
+      font-size: .76rem;
+      font-weight: 700;
+      opacity: .48;
+      transition: opacity .18s, transform .18s, box-shadow .18s;
+    }
+
+    .status-button:hover:not(:disabled) { opacity: .82; transform: translateY(-1px); }
+    .status-button.is-selected { opacity: 1; box-shadow: 0 0 0 2px rgba(23,59,90,.18); }
+    .status-present { background: #dff2ea; color: #196248; border-color: #afdac9; }
+    .status-not-attended { background: #fbefd8; color: #93611b; border-color: #e8c986; }
+    .status-absent { background: #f9e4e4; color: #963d3d; border-color: #e6b2b2; }
+    .status-assigned { background: #ebe7f5; color: #5c4d85; border-color: #c9bfe0; }
+
+    .row-actions, .normal-actions, .confirm-delete {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      white-space: nowrap;
+    }
+
+    .small-button {
+      min-height: 36px;
+      border-radius: 7px;
+      padding: 6px 10px;
+      border: 1px solid #cbd8dc;
+      font-weight: 700;
+      font-size: .8rem;
+      transition: filter .18s, transform .18s, box-shadow .18s;
+    }
+
+    .confirm-delete { display: none; }
+    .delete-prompt .normal-actions { display: none; }
+    .delete-prompt .confirm-delete { display: flex; }
+
+    .empty-box {
+      display: grid;
+      justify-items: center;
+      gap: 9px;
+      padding: 47px 20px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .empty-box svg { color: #9aadb4; width: 33px; height: 33px; }
+
+    .export-zone {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px 22px;
+      border-radius: 14px;
+      border-right: 4px solid var(--gold);
+    }
+
+    .export-title { margin: 0; font-weight: 800; color: var(--navy-deep); }
+    .export-copy { margin: 3px 0 0; color: var(--muted); font-size: .83rem; }
+    .export-buttons { display: flex; gap: 9px; flex-wrap: wrap; }
+    .notice { min-height: 20px; margin: 13px 2px 0; font-size: .84rem; font-weight: 600; }
+    .notice.success { color: var(--success); }
+    .notice.error { color: var(--danger); }
+    .notice.info { color: #49677a; }
+    .footer-note { text-align: center; margin: 21px 0 0; color: #71818a; font-size: .73rem; }
+
+    @keyframes rise-in {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 850px) {
+      .app-shell { padding: 16px; }
+      .header-inner, .export-zone { align-items: stretch; flex-direction: column; }
+      .control-panel { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2,1fr); }
+      .today-pill { align-self: flex-start; }
+    }
+
+    @media (max-width: 520px) {
+      .header-inner { padding: 20px; }
+      .seal { width: 45px; height: 45px; }
+      .header-copy { align-items: flex-start; }
+      .date-side, .add-side, .field-block, .name-input { width: 100%; }
+      .date-input, .name-input { width: 100%; }
+      .official-button { flex: 1; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .stat-card:last-child { grid-column: span 2; }
+      .export-buttons { display: grid; grid-template-columns: 1fr; }
+    }
+  </style>
+ </head>
+ <body data-template-id="__page-root">
+  <div class="app-shell">
+   <div class="content-frame">
+    <header data-template-id="header-section" class="official-header canva-header">
+     <div class="header-inner">
+      <div class="header-copy">
+       <div class="seal" aria-hidden="true">
+        <i data-lucide="landmark" style="width:26px;height:26px"></i>
+       </div>
+       <div>
+        <p data-template-id="header-eyebrow" class="eyebrow canva-text"></p>
+        <h1 data-template-id="page-title" class="page-heading canva-text"></h1>
+        <p data-template-id="page-subtitle" class="page-subtitle canva-text"></p>
+       </div>
+      </div>
+      <div data-template-id="today-label" id="today-label" class="today-pill canva-tag"></div>
+     </div>
+    </header>
+    <main>
+     <section data-template-id="control-panel" class="control-panel canva-panel" aria-label="إدارة سجل الحضور">
+      <div class="date-side">
+       <div class="field-block"><label data-template-id="date-label" for="attendance-date" class="field-label canva-text"></label> <input data-template-id="date-input" id="attendance-date" class="date-input canva-input" type="date">
+       </div><button data-template-id="today-button" id="today-button" type="button" class="official-button outline-button canva-button"> <i data-lucide="calendar-days" style="width:17px;height:17px"></i> </button>
+      </div>
+      <form id="add-employee-form" class="add-side" novalidate>
+       <div class="field-block"><label data-template-id="employee-name-label" for="employee-name" class="field-label canva-text"></label> <input data-template-id="employee-name-input" id="employee-name" class="name-input canva-input" type="text" autocomplete="off">
+       </div><button data-template-id="add-employee-button" id="add-employee-button" type="submit" class="official-button canva-button"> <i data-lucide="user-plus" style="width:17px;height:17px"></i> </button>
+      </form>
+     </section>
+     <section class="stats-grid" aria-label="إحصاءات الحضور">
+      <article class="stat-card" style="--accent:#173b5a"><span data-template-id="total-label" class="stat-label canva-text"></span> <strong id="total-count" class="stat-value" aria-live="polite">0</strong>
+      </article>
+      <article class="stat-card" style="--accent:#24755a"><span data-template-id="present-label" class="stat-label canva-text"></span> <strong id="present-count" class="stat-value" aria-live="polite">0</strong>
+      </article>
+      <article class="stat-card" style="--accent:#b17a27"><span data-template-id="not-attended-label" class="stat-label canva-text"></span> <strong id="not-attended-count" class="stat-value" aria-live="polite">0</strong>
+      </article>
+      <article class="stat-card" style="--accent:#a44949"><span data-template-id="absent-label" class="stat-label canva-text"></span> <strong id="absent-count" class="stat-value" aria-live="polite">0</strong>
+      </article>
+      <article class="stat-card" style="--accent:#726193"><span data-template-id="assigned-label" class="stat-label canva-text"></span> <strong id="assigned-count" class="stat-value" aria-live="polite">0</strong>
+      </article>
+     </section>
+     <section data-template-id="attendance-section" class="attendance-card canva-section" aria-labelledby="table-heading">
+      <div class="card-heading">
+       <h2 data-template-id="table-heading" id="table-heading" class="canva-text"></h2><span id="record-count" class="record-count" aria-live="polite"></span>
+      </div>
+      <div class="table-wrap">
+       <table class="attendance-table">
+        <thead>
+         <tr>
+          <th data-template-id="number-column" class="canva-text"></th>
+          <th data-template-id="name-column" class="canva-text"></th>
+          <th data-template-id="status-column" class="canva-text"></th>
+          <th data-template-id="actions-column" class="canva-text"></th>
+         </tr>
+        </thead>
+        <tbody id="attendance-list"></tbody>
+       </table>
+       <div id="empty-state" class="empty-box"><i data-lucide="clipboard-x"></i>
+        <p data-template-id="empty-state-text" class="canva-text"></p>
+       </div>
+      </div>
+     </section>
+     <section data-template-id="export-section" class="export-zone canva-section" aria-labelledby="export-heading">
+      <div>
+       <h2 data-template-id="export-heading" id="export-heading" class="export-title canva-text"></h2>
+       <p data-template-id="export-description" class="export-copy canva-text"></p>
+      </div>
+      <div class="export-buttons"><button data-template-id="export-daily-button" id="export-daily-button" type="button" class="official-button canva-button"><i data-lucide="download" style="width:16px;height:16px"></i></button> <button data-template-id="export-weekly-button" id="export-weekly-button" type="button" class="official-button canva-button"><i data-lucide="download" style="width:16px;height:16px"></i></button> <button data-template-id="export-monthly-button" id="export-monthly-button" type="button" class="official-button canva-button"><i data-lucide="download" style="width:16px;height:16px"></i></button>
+      </div>
+     </section>
+     <p id="notice" class="notice" role="status" aria-live="polite"></p>
+    </main>
+    <footer>
+     <p data-template-id="footer-note" class="footer-note canva-text"></p>
+    </footer>
+   </div>
+  </div>
+  <template id="attendance-row-template">
+   <tr data-template-id="attendance-row" class="canva-card">
+    <td class="number-cell row-number"></td>
+    <td><label class="sr-only row-name-accessible-label">اسم الموظفة</label> <input data-template-id="row-name-input" class="row-name canva-input" type="text"></td>
+    <td>
+     <div class="status-buttons" role="group" aria-label="حالة الحضور"><button data-template-id="status-present-button" type="button" class="status-button status-present canva-button" data-status="حضرت" aria-pressed="false"></button> <button data-template-id="status-not-attended-button" type="button" class="status-button status-not-attended canva-button" data-status="لم تحضر" aria-pressed="false"></button> <button data-template-id="status-absent-button" type="button" class="status-button status-absent canva-button" data-status="غائبة" aria-pressed="false"></button> <button data-template-id="status-assigned-button" type="button" class="status-button status-assigned canva-button" data-status="مكلفة" aria-pressed="false"></button>
+     </div></td>
+    <td>
+     <div class="row-actions">
+      <div class="normal-actions"><button data-template-id="save-name-button" type="button" class="small-button canva-button save-name-button"></button> <button data-template-id="delete-button" type="button" class="small-button canva-button delete-button"></button>
+      </div>
+      <div class="confirm-delete"><span data-template-id="delete-question" class="canva-text"></span> <button data-template-id="confirm-delete-button" type="button" class="small-button canva-button confirm-delete-button"></button> <button data-template-id="cancel-delete-button" type="button" class="small-button canva-button cancel-delete-button"></button>
+      </div>
+     </div></td>
+   </tr>
+  </template>
+  <script src="/_sdk/f344579cd2b2cf70.editing_sdk.js" integrity="sha512-bzdgmfJ/pl/acJqgk+LGvYwJbF03Y2d6f4oZHD96WjqTnvQUZBGVAQkTDRz+fyIMjVc+AXkpwFXqDYLeHDMLSw=="></script>
+  <script>
+    const state = { records: [], selectedDate: "", initialized: false };
+    const list = document.getElementById("attendance-list");
+    const dateInput = document.getElementById("attendance-date");
+    const emptyState = document.getElementById("empty-state");
+    const notice = document.getElementById("notice");
+
+    function localDateISO(date = new Date()) {
+      const offset = date.getTimezoneOffset();
+      return new Date(date.getTime() - offset * 60000).toISOString().slice(0, 10);
+    }
+
+    function formatArabicDate(dateString) {
+      return new Intl.DateTimeFormat("ar-SA", { year: "numeric", month: "long", day: "numeric" })
+        .format(new Date(dateString + "T12:00:00"));
+    }
+
+    function showNotice(message, type = "info") {
+      notice.textContent = message;
+      notice.className = "notice " + type;
+    }
+
+    function rosterRecords() {
+      return state.records
+        .filter(record => record.is_roster === true)
+        .sort((a, b) => a.employee_name.localeCompare(b.employee_name, "ar"));
+    }
+
+    function attendanceFor(name) {
+      return state.records.find(record =>
+        record.is_roster !== true &&
+        record.date === state.selectedDate &&
+        record.employee_name === name
+      );
+    }
+
+    function updateSummary(roster) {
+      const counts = { "حضرت": 0, "لم تحضر": 0, "غائبة": 0, "مكلفة": 0 };
+      roster.forEach(person => {
+        const attendance = attendanceFor(person.employee_name);
+        if (attendance && counts[attendance.status] !== undefined) counts[attendance.status] += 1;
+      });
+
+      document.getElementById("total-count").textContent = roster.length;
+      document.getElementById("present-count").textContent = counts["حضرت"];
+      document.getElementById("not-attended-count").textContent = counts["لم تحضر"];
+      document.getElementById("absent-count").textContent = counts["غائبة"];
+      document.getElementById("assigned-count").textContent = counts["مكلفة"];
+      document.getElementById("record-count").textContent = roster.length ? `عدد الأسماء الثابتة: ${roster.length}` : "لا توجد أسماء ثابتة";
+    }
+
+    function setStatusButtons(row, status) {
+      row.querySelectorAll(".status-button").forEach(button => {
+        const selected = button.dataset.status === status;
+        button.classList.toggle("is-selected", selected);
+        button.setAttribute("aria-pressed", String(selected));
+      });
+    }
+
+    async function saveStatus(person, row, status, button) {
+      const existing = attendanceFor(person.employee_name);
+      if (existing && existing.status === status) return;
+
+      row.querySelectorAll(".status-button").forEach(item => item.disabled = true);
+      const result = existing
+        ? await window.dataSdk.update({ ...existing, status })
+        : await window.dataSdk.create({
+            employee_name: person.employee_name,
+            date: state.selectedDate,
+            status,
+            is_roster: false
+          });
+
+      row.querySelectorAll(".status-button").forEach(item => item.disabled = false);
+
+      if (result.isOk) {
+        setStatusButtons(row, status);
+        showNotice("تم حفظ حالة الحضور.", "success");
+      } else {
+        setStatusButtons(row, existing ? existing.status : "");
+        showNotice("تعذر حفظ حالة الحضور، يرجى المحاولة مرة أخرى.", "error");
+      }
+    }
+
+    function createRow(person, index) {
+      const fragment = document.getElementById("attendance-row-template").content.cloneNode(true);
+      const row = fragment.querySelector("tr");
+      row.dataset.recordId = person.__backendId;
+      row.querySelector(".row-number").textContent = index + 1;
+
+      const nameInput = row.querySelector(".row-name");
+      nameInput.value = person.employee_name;
+      nameInput.setAttribute("aria-label", "اسم الموظفة " + (index + 1));
+
+      const attendance = attendanceFor(person.employee_name);
+      setStatusButtons(row, attendance ? attendance.status : "");
+
+      row.querySelectorAll(".status-button").forEach(button => {
+        button.setAttribute("aria-label", button.textContent + " لـ " + person.employee_name);
+        button.addEventListener("click", () => saveStatus(person, row, button.dataset.status, button));
+      });
+
+      row.querySelector(".save-name-button").addEventListener("click", async function() {
+        const nextName = nameInput.value.trim();
+        if (!nextName) {
+          showNotice("يرجى كتابة اسم الموظفة قبل الحفظ.", "error");
+          nameInput.focus();
+          return;
+        }
+
+        if (nextName === person.employee_name) {
+          showNotice("لا توجد تعديلات على الاسم.", "info");
+          return;
+        }
+
+        if (rosterRecords().some(item => item.__backendId !== person.__backendId && item.employee_name.trim() === nextName)) {
+          showNotice("هذا الاسم موجود بالفعل في القائمة الثابتة.", "error");
+          return;
+        }
+
+        this.disabled = true;
+        const result = await window.dataSdk.update({ ...person, employee_name: nextName });
+        this.disabled = false;
+        showNotice(result.isOk ? "تم تعديل الاسم في القائمة الثابتة." : "تعذر تعديل الاسم، يرجى المحاولة مرة أخرى.", result.isOk ? "success" : "error");
+      });
+
+      row.querySelector(".delete-button").addEventListener("click", () => row.classList.add("delete-prompt"));
+      row.querySelector(".cancel-delete-button").addEventListener("click", () => row.classList.remove("delete-prompt"));
+
+      row.querySelector(".confirm-delete-button").addEventListener("click", async function() {
+        this.disabled = true;
+        const result = await window.dataSdk.delete(person);
+        this.disabled = false;
+        if (result.isOk) {
+          showNotice("تم حذف الاسم من القائمة الثابتة. السجلات التاريخية محفوظة.", "success");
+        } else {
+          row.classList.remove("delete-prompt");
+          showNotice("تعذر حذف الاسم، يرجى المحاولة مرة أخرى.", "error");
+        }
+      });
+
+      return row;
+    }
+
+    function renderRecords() {
+      const roster = rosterRecords();
+      const existing = new Map([...list.children].map(row => [row.dataset.recordId, row]));
+      const orderedRows = [];
+
+      roster.forEach((person, index) => {
+        let row = existing.get(person.__backendId);
+        if (row) {
+          existing.delete(person.__backendId);
+          row.querySelector(".row-number").textContent = index + 1;
+          const input = row.querySelector(".row-name");
+          if (document.activeElement !== input) input.value = person.employee_name;
+          const attendance = attendanceFor(person.employee_name);
+          setStatusButtons(row, attendance ? attendance.status : "");
+        } else {
+          row = createRow(person, index);
+        }
+        orderedRows.push(row);
+      });
+
+      existing.forEach(row => row.remove());
+      orderedRows.forEach(row => list.appendChild(row));
+      emptyState.style.display = roster.length ? "none" : "grid";
+      updateSummary(roster);
+    }
+
+    function setSelectedDate(date) {
+      state.selectedDate = date;
+      dateInput.value = date;
+      renderRecords();
+      showNotice(`يتم الآن عرض سجل حضور ${formatArabicDate(date)}.`, "info");
+    }
+
+    function csvEscape(value) {
+      return `"${String(value ?? "").replace(/"/g, '""')}"`;
+    }
+
+    function getRange(type) {
+      const base = new Date(state.selectedDate + "T12:00:00");
+      let start, end, label;
+
+      if (type === "daily") {
+        start = new Date(base); end = new Date(base); label = "اليومي";
+      } else if (type === "weekly") {
+        start = new Date(base);
+        start.setDate(start.getDate() - ((start.getDay() + 1) % 7));
+        end = new Date(start);
+        end.setDate(end.getDate() + 6);
+        label = "الأسبوعي";
+      } else {
+        start = new Date(base.getFullYear(), base.getMonth(), 1);
+        end = new Date(base.getFullYear(), base.getMonth() + 1, 0);
+        label = "الشهري";
+      }
+      return { start: localDateISO(start), end: localDateISO(end), label };
+    }
+
+    function exportReport(type) {
+      const range = getRange(type);
+      const records = state.records
+        .filter(record => record.is_roster !== true && record.date >= range.start && record.date <= range.end)
+        .sort((a, b) => a.date.localeCompare(b.date) || a.employee_name.localeCompare(b.employee_name, "ar"));
+
+      if (!records.length) {
+        showNotice(`لا توجد بيانات لتصدير التقرير ${range.label} ضمن الفترة المحددة.`, "error");
+        return;
+      }
+
+      const rows = [
+        ["إحصائية حضور الطابور الصباحي"],
+        ["نوع التقرير", range.label],
+        ["الفترة", `${range.start} إلى ${range.end}`],
+        [],
+        ["التاريخ", "اسم الموظفة", "حالة الحضور"],
+        ...records.map(record => [record.date, record.employee_name, record.status])
+      ];
+
+      const blob = new Blob(["\uFEFF" + rows.map(row => row.map(csvEscape).join(",")).join("\n")], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `احصائية-الطابور-${type}-${state.selectedDate}.csv`;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+      showNotice(`تم تحميل التقرير ${range.label} بنجاح.`, "success");
+    }
+
+    const dataHandler = {
+      onDataChanged(data) {
+        state.records = data;
+        renderRecords();
+      }
+    };
+
+    async function initialize() {
+      const today = localDateISO();
+      state.selectedDate = today;
+      dateInput.value = today;
+      document.getElementById("today-label").textContent = `تاريخ اليوم: ${formatArabicDate(today)}`;
+
+      const result = await window.dataSdk.init(dataHandler);
+      if (!result.isOk) {
+        showNotice("تعذر تحميل سجلات الحضور حالياً. يرجى إعادة المحاولة لاحقاً.", "error");
+        return;
+      }
+      state.initialized = true;
+      showNotice(`جاهز لتسجيل حضور ${formatArabicDate(today)}.`, "info");
+    }
+
+    document.getElementById("add-employee-form").addEventListener("submit", async function(event) {
+      event.preventDefault();
+      const input = document.getElementById("employee-name");
+      const button = document.getElementById("add-employee-button");
+      const employeeName = input.value.trim();
+
+      if (!employeeName) {
+        showNotice("يرجى إدخال اسم الموظفة لإضافته.", "error");
+        input.focus();
+        return;
+      }
+      if (!state.initialized) {
+        showNotice("يتم تجهيز السجل، يرجى الانتظار قليلاً.", "info");
+        return;
+      }
+      if (state.records.length >= 999) {
+        showNotice("تم الوصول إلى الحد الأقصى للسجلات. احذفي سجلات غير لازمة لإضافة المزيد.", "error");
+        return;
+      }
+      if (rosterRecords().some(record => record.employee_name.trim() === employeeName)) {
+        showNotice("اسم الموظفة موجود بالفعل في القائمة الثابتة.", "error");
+        return;
+      }
+
+      button.disabled = true;
+      const result = await window.dataSdk.create({
+        employee_name: employeeName,
+        date: "",
+        status: "",
+        is_roster: true
+      });
+      button.disabled = false;
+
+      if (result.isOk) {
+        input.value = "";
+        showNotice("تمت إضافة الاسم إلى القائمة الثابتة وسيظهر تلقائياً كل يوم.", "success");
+      } else {
+        showNotice("تعذر إضافة الاسم، يرجى المحاولة مرة أخرى.", "error");
+      }
+    });
+
+    dateInput.addEventListener("change", function() {
+      if (this.value) setSelectedDate(this.value);
+    });
+
+    document.getElementById("today-button").addEventListener("click", function() {
+      const today = localDateISO();
+      setSelectedDate(today);
+      document.getElementById("today-label").textContent = `تاريخ اليوم: ${formatArabicDate(today)}`;
+    });
+
+    document.getElementById("export-daily-button").addEventListener("click", () => exportReport("daily"));
+    document.getElementById("export-weekly-button").addEventListener("click", () => exportReport("weekly"));
+    document.getElementById("export-monthly-button").addEventListener("click", () => exportReport("monthly"));
+
+    document.addEventListener("DOMContentLoaded", function() {
+      lucide.createIcons();
+      initialize();
+    });
+  </script>
+ </body>
+</html>
